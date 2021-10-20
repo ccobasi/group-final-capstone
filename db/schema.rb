@@ -10,38 +10,52 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_10_20_152039) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "car_type", id: :serial, force: :cascade do |t|
-    t.string "make", limit: 255, null: false
-    t.string "model", limit: 255, null: false
+  create_table "car_types", force: :cascade do |t|
+    t.string "make"
+    t.string "model"
+    t.bigint "car_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["car_id"], name: "index_car_types_on_car_id"
   end
 
-  create_table "cars", id: :serial, force: :cascade do |t|
-    t.string "name", limit: 255, null: false
+  create_table "cars", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "image_data"
   end
 
-  create_table "city", id: :serial, force: :cascade do |t|
-    t.string "name", limit: 255, null: false
-    t.index ["name"], name: "city_name_key", unique: true
+  create_table "cities", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "reservations", id: :serial, force: :cascade do |t|
-    t.boolean "reserve", null: false
-    t.datetime "date"
+  create_table "reservations", force: :cascade do |t|
+    t.boolean "reserve"
+    t.date "date"
+    t.bigint "car_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["car_id"], name: "index_reservations_on_car_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
-  create_table "users", id: :serial, force: :cascade do |t|
-    t.string "user_name", limit: 50, null: false
-    t.string "password", limit: 50, null: false
-    t.boolean "isadmin", null: false
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.boolean "isadmin"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "car_type", "cars", column: "id", name: "car_type_id_fkey"
-  add_foreign_key "reservations", "cars", column: "id", name: "reservations_id_fkey"
-  add_foreign_key "reservations", "users", column: "id", name: "reservations_id_fkey1"
-  add_foreign_key "users", "users", column: "id", name: "users_id_fkey"
+  add_foreign_key "car_types", "cars"
+  add_foreign_key "reservations", "cars"
+  add_foreign_key "reservations", "users"
 end
