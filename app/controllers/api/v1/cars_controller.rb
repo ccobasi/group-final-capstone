@@ -6,10 +6,12 @@ class Api::V1::CarsController < ApplicationController
     @cars = Car.all
     render json: @cars
   end
+
   # GET /cars/1
   def show
     render json: @car
   end
+
   # POST /cars
   def create
     @car = Car.new(car_params)
@@ -19,6 +21,7 @@ class Api::V1::CarsController < ApplicationController
       render json: @car.errors, status: :unprocessable_entity
     end
   end
+
   # PATCH/PUT /cars/1
   def update
     if @car.update(car_params)
@@ -28,16 +31,20 @@ class Api::V1::CarsController < ApplicationController
       render json: @car.errors, status: :unprocessable_entity
     end
   end
+
   # DELETE /cars/1
   def destroy
     @car.destroy
     head :no_content
   end
+
   private
-  #Use callbacks to share common setup or constraints between actions.
+
+  # Use callbacks to share common setup or constraints between actions.
   def set_car
     @car = Car.find(params[:id])
   end
+
   # Only allow a list of trusted parameters through.++++++
   def car_params
     params.require(:car).permit(:name, :image_data)
