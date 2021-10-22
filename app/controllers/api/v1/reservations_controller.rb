@@ -1,5 +1,5 @@
 class Api::V1::ReservationsController < ApplicationController
-  before_action only: [:show, :update, :destroy, :create]
+  before_action only: %i[show update destroy create]
   # GET /reservastions
   def index
     @reservations = Reservation.all

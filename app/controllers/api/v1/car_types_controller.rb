@@ -1,5 +1,5 @@
 class Api::V1::CarTypesController < ApplicationController
-  before_action :set_car_type, only: [:show, :update, :destroy]
+  before_action :set_car_type, only: %i[show update destroy]
   # GET /car_types
   def index
     @car_types = CarType.all
