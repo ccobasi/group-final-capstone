@@ -1,3 +1,5 @@
 class PagesController < ApplicationController
-  def home; end
+  def home
+    render json: 'Welcome to Car rentals'
+  end
 end
