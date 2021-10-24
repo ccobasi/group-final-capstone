@@ -19,9 +19,9 @@ cities = City.create!([
 
 cars = Car.create!([
   {name: 'corona', image_data: 'helo' },
-  {name: 'gypsum',  image_data: 'hhe'},
+  {name: 'gypsum',  image_data: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8MjAyMCUyMGNhcnN8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80'},
   {name: 'Prado', image_data: 'hhhe'},
-  {name: 'Limozine', image_data: 'hhehe'}
+  {name: 'Limozine', image_data: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8MjAyMCUyMGNhcnN8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80'}
 ])
 
 reservations = Reservation.create!([
