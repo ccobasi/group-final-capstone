@@ -4,10 +4,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :tokens, only: [:create]
-      resources :users, :cars, :car_types, :reservations
-      # post :sign_in, to: 'sessions#create'
-      # delete :sign_out, to: "sessions#logout"
-      # get :signed_in, to: "sessions#logged_in"
+      resources :users, :cars, :car_types, :reservations, :cities
     end
   end
 
