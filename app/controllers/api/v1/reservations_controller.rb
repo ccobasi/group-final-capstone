@@ -1,5 +1,7 @@
 class Api::V1::ReservationsController < ApplicationController
-  before_action only: %i[show update destroy create]
+  before_action :set_reservation, only: %i[show update destroy]
+  before_action :check_login, only: %i[create]
+  before_action :check_owner, only: %i[update destroy]
   # GET /reservastions
   def index
     @reservations = Reservation.all
@@ -13,11 +15,11 @@ class Api::V1::ReservationsController < ApplicationController
 
   # POST /reservation
   def create
-    @reservation = Reservation.new(reservation_params)
-    if @reservation.save
-      render json: @reservation, status: :created, location: api_v1_reservations_path(@reservation)
+    reservation = current_user.reservations.build(reservation_params)
+    if reservation.save
+      render json: reservation, status: :created, location: api_v1_reservations_path(@reservation)
     else
-      render json: @reservation.errors, status: :unprocessable_entity
+      render json: reservation.errors, status: :unprocessable_entity
     end
   end
 
@@ -33,6 +35,7 @@ class Api::V1::ReservationsController < ApplicationController
   # DELETE /reservation/1
   def destroy
     @reservation.destroy
+    head 204
   end
 
   private
@@ -44,6 +47,6 @@ class Api::V1::ReservationsController < ApplicationController
 
   # Only allow a list of trusted parameters through.++++++
   def reservation_params
-    params.require(:reservation).permit(:reserve, :date, :car_id, :user_id, :city_id)
+    params.require(:reservation).permit(:reserve, :date, :car_id, :city_id)
   end
 end
