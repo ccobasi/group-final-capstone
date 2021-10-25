@@ -1,14 +1,27 @@
 class Api::V1::UsersController < ApplicationController
+  before_action :set_user, only: %[show update destroy]
     def index
       @users = User.all
   
       render json: @users
     end
-  
+
     # POST /users
     def create
       @user = User.create!(user_params)
       json_response(@user, :created)
+    end
+
+    def update
+      if @user.update(user_params)
+        render json: @user, status: :ok
+      else 
+        render json: @user.errors, status: :unprocessable_entity
+      end
+    end
+
+    def show 
+      render json: @user
     end
   
     # DELETE /users/:id
