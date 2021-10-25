@@ -11,6 +11,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
+gem 'jwt', '~> 2.2'
 
 gem 'hirb', '~> 0.7.3'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
