@@ -3,8 +3,10 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   namespace :api do
     namespace :v1 do
-      resources :tokens, only: [:create]
-      resources :users, :cars, :car_types, :reservations, :cities
+      post 'register', to: 'users#create'
+      post 'sign_in', to: 'tokens#create'
+      resources :users, only: %[index show update destroy]
+      resources :cars, :car_types, :reservations, :cities
     end
   end
 
