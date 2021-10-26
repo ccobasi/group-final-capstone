@@ -20,16 +20,16 @@ default: &default
   database: final_capstone_rails
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   host: localhost
-  password: password
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
+  port: 5432
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
 
 development:
   <<: *default
-  database: final_capstone_rails
-  username: postgres
-  password: password
-  port: 5432
+  database: <%= ENV['POSTGRES_DB'] %>
+ 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
@@ -62,7 +62,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: final_capstone_rails_test
+  database: <%= ENV['POSTGRES_TEST_DB'] %>
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
