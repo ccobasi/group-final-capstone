@@ -3,40 +3,52 @@ class Api::V1::UsersController < ApplicationController
   before_action :check_owner, only: %i[update destroy]
     def index
       @users = User.all
-  
-      render json: @users
+      render json: UserSerializer.new(@users).serializable_hash
     end
 
     # POST /users
     def create
-      @user = User.create!(user_params)
-      json_response(@user, :created)
+      @user = User.new(user_params)
+
+      if @user.save
+        render json: {
+          user: {
+            id: @user.id,
+            admin: @user.admin,
+            username: @user.username,
+            email: @user.email,
+            token: JsonWebToken.encode(user_id: @user.id)
+          }
+        }, status: :created
+      else
+        render json: @user.errors.full_messages, status: :unprocessable_entity
+      end
     end
 
     def update
       if @user.update(user_params)
-        render json: @user, status: :ok
+        render json: UserSerializer.new(@user).serializable_hash, status: :ok
       else 
         render json: @user.errors, status: :unprocessable_entity
       end
     end
 
     def show 
-      render json: @user
+      render json: UserSerializer.new(@user).serializable_hash
     end
   
     # DELETE /users/:id
     def destroy
-      @user = User.find(params[:id])
-      @user.destroy if @user.present?
-      head :no_content
+      @user.destroy
+      head 204
     end
   
     private
   
     def user_params
       # whitelist params
-      params.require(:user).permit(:username, :email, :password_digest)
+      params.require(:user).permit(:username, :email, :password_digest, password_confirmation,
+                                    :admin).with_defaults(admin: false)
     end
   
     def set_user
