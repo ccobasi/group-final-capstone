@@ -47,7 +47,7 @@ class Api::V1::UsersController < ApplicationController
   
     def user_params
       # whitelist params
-      params.require(:user).permit(:username, :email, :password_digest, password_confirmation,
+      params.require(:user).permit(:username, :email, :password_digest,
                                     :admin).with_defaults(admin: false)
     end
   

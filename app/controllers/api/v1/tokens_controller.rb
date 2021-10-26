@@ -1,7 +1,7 @@
 class Api::V1::TokensController < ApplicationController
     def create
     @user = User.find_by_email(user_params[:email])
-        if @user&.authenticate(user_params[:password])
+        if @user&.authenticate(user_params[:password_digest])
             render json: {
                 user: {
                     id: @user.id,
@@ -18,6 +18,6 @@ class Api::V1::TokensController < ApplicationController
     private
     # Only allow a trusted parameter "white list" through.
     def user_params
-        params.require(:user).permit(:email, :password)
+        params.require(:user).permit(:email, :password_digest)
     end
 end
