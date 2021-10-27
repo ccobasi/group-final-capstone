@@ -5,10 +5,11 @@ CarType.destroy_all
 Reservation.destroy_all
 
 users = User.create!([
-  {username: 'jocyline', email:'jo@gmail.com', admin:true, password:"jo@8"},
-  {username: 'eri-ngozi', email:'er@gmail.com', admin:false, password:"er@8"},
-  {username: 'chukuma', email:'chuma@gmail.com', admin:false, password:"chuma@8"},
-  {username: 'irenehe', email:'irene@gmail.com', admin:false, password:"iren@8"},
+  {username: 'jocyline', email:'jo@gmail.com', admin:true, password:"jo@8", password_confirmation:"jo@8"},
+  {username: 'eri-ngozi', email:'er@gmail.com', admin:false, password:"er@8", password_confirmation:"er@8"},
+  {username: 'chukuma', email:'chuma@gmail.com', admin:false, password:"chuma@8", password_confirmation:"chuma@8"},
+  {username: 'irenehe', email:'irene@gmail.com', admin:false, password:"iren@8",
+    password_confirmation:"iren@8"},
 ])
 
 cities = City.create!([
