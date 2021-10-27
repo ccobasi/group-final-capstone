@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def home
-    render json: { status: "Welcome..." }
+    render json: { status: 'Welcome...' }
   end
 end
