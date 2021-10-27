@@ -1,5 +1,6 @@
 class Car < ApplicationRecord
   validates :name, presence: true
-
-  #  has_one :reservation, :class_name => 'Reservation', :foreign_key => 'car_id'
+  has_one_attached :image
+  has_many :reservation, dependent: :destroy
+  has_one :car_type, dependent: :destroy
 end
