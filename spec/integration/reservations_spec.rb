@@ -11,11 +11,11 @@ RSpec.describe 'api/reservations', type: :request do
             properties: {
                 car_id: { type: :integer },
                 user_id: { type: :integer },
-                created_at: { type: :string },,
+                created_at: { type: :string },
                 reserve: { type: :bolean },
                 date: { type: :datetime },
                 created_at: { type: :string },
-                updated_at: { type: :string },
+                updated_at: { type: :string }
             
 
     "created_at": "2021-10-22T20:33:13.209Z",
@@ -52,7 +52,7 @@ RSpec.describe 'api/reservations', type: :request do
                 reserve: { type: :bolean },
                 date: { type: :datetime },
                 created_at: { type: :string },
-                updated_at: { type: :string },
+                updated_at: { type: :string }
               },
               required: [ 'id', 'name', 'image_data' ]
     

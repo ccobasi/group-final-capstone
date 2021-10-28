@@ -13,7 +13,7 @@ RSpec.describe 'api/car_types', type: :request do
           model: { type: :string },
           car_id: { type: :integer },
           created_at: { type: :string },
-          updated_at: { type: :string },
+          updated_at: { type: :string }
         },
         required: ['id', 'make', 'car_id', 'model']
       }
@@ -44,7 +44,7 @@ RSpec.describe 'api/car_types', type: :request do
                  model: { type: :string },
                  car_id: { type: :integer },
                  created_at: { type: :string },
-                 updated_at: { type: :string },
+                 updated_at: { type: :string }
                },
                required: ['id', 'make', 'car_id', 'model']
 

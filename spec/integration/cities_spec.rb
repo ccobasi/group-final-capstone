@@ -42,7 +42,7 @@ RSpec.describe 'api/cities', type: :request do
               properties: {
                 id: { type: :integer },
                 name: { type: :string },
-                created_at: { type: :string },,
+                created_at: { type: :string },
                 updated_at: { type: :string },
                 image_data: { type: :string }
               },

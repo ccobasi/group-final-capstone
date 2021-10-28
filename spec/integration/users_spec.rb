@@ -10,7 +10,7 @@ RSpec.describe 'api/users', type: :request do
             type: :object,
             properties: {
                 id: { type: :integer },
-                created_at: { type: :string },,
+                created_at: { type: :string },
                 updated_at: { type: :string },
                 name: { type: :string },
                 image_data: { type: :string }
@@ -42,7 +42,7 @@ RSpec.describe 'api/users', type: :request do
               properties: {
                 id: { type: :integer },
                 name: { type: :string },
-                created_at: { type: :string },,
+                created_at: { type: :string },
                 updated_at: { type: :string },
                 image_data: { type: :string }
               },
