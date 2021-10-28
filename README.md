@@ -158,6 +158,9 @@ To get a local copy up and running follow these simple example steps:
 ## React Fronted App 
 [App](https://github.com/mrigorir/group-final-capstone-react)
 
+## API Documentation
+[API DOC LINK](https://capstoneapi.postman.co/workspace/3611123d-64d3-44a4-83f2-183e97770672)
+
 ## Linters
 To run the linters included in this repository, go to the root directory of your repository and copy/paste the following commands into your terminal:
 (**Note:** Make sure you run `npm install` before you do this)
@@ -199,7 +202,7 @@ To make sure the linters' checks using Github Actions work properly, you should 
 
 ## Project Structure
 
-    Hello-world-rails-react Project
+    Group-Final-Capstone-react Project
     └── node_modules
     └── .github\workflows
         └── linters.yml
@@ -219,6 +222,11 @@ To make sure the linters' checks using Github Actions work properly, you should 
     └── package.json
     └──README.md
 
+
+### Kanban Board links
+- [Previous State](https://github.com/ccobasi/group-final-capstone/issues/45)
+- [Current State](https://github.com/ccobasi/group-final-capstone/projects/1)
+
 ### Install Dependencies
 1. If you are not in your system terminal/command prompt already, please open it and go to the directory where you cloned the remote repository or extracted the project files.
 2. While in the project root directory, type `bundle install`. This command will install all the necessary gems in your system.
@@ -232,7 +240,7 @@ To make sure the linters' checks using Github Actions work properly, you should 
 - Twitter: [@marcoparra311](https://twitter.com/marcoparra311)
 - LinkedIn: [@marco-alonso-parra](https://www.linkedin.com/in/marco-alonso-parra/)
 
-👤 **Eri Ngozi**
+👤 **Eri**
 
 - Github: [@errea](https://github.com/errea)
 - Twitter: [@Erreakay](https://github.com/errea)
