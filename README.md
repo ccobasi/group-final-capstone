@@ -62,7 +62,6 @@ To make sure the linters' checks using Github Actions work properly, you should 
 - Ruby 2.6.8
 - Node.js
 - NPM
-- Yarn
 
 ### Install Dependencies
 1. If you are not in your system terminal/command prompt already, please open it and go to the directory where you cloned the remote repository or extracted the project files.
