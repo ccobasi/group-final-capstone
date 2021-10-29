@@ -1,11 +1,7 @@
+# Book Car Appointment- React-Rails Capstone project 
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Book Car Appointment- React-Rails Capstone project 
-
-> The project is the final capstone group were are going to build for an appointment app for cars for users to book on an appointment app to create, reserve and see list of reserved cars. 
-
-  
 This app is designed follwing a real world senerio with given designs, and we had to personalize the content.[Find project specifications here](https://github.com/microverseinc/curriculum-final-capstone/blob/main/projects/business_requirements.md)
 
 
@@ -16,6 +12,14 @@ This app is designed follwing a real world senerio with given designs, and we ha
 [![GitHub Pull Requests](https://img.shields.io/badge/GitHub-Pull%20Requests-blue)](https://github.com/errea/Hello-world-rails-react/pull/1)
 [![Backend API Repo](https://img.shields.io/badge/Backend-API%20Repo-purple)](https://github.com/ccobasi/group-final-capstone)
 [![API DOCS](https://img.shields.io/badge/API-Documentation%50-yellow)]()
+
+</div>
+
+<p align="center">
+<a href="#with">Built with</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#gs">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#author">Authors</a>
+</p>
 
 </div>
 
@@ -106,8 +110,7 @@ Make sure that the "Add item" and "Delete item" links are accessible only by use
 - redux-thunk
 - Linters: Rubocop, ESLint
 - NPM
-<<<<<<< HEAD
-=======
+
 - Functional based Components with React Hooks 
 - Virtual DOM
 - [Webpack config](hhttps://webpack.js.org/guides/getting-started/)
@@ -117,7 +120,7 @@ Make sure that the "Add item" and "Delete item" links are accessible only by use
 - Use styles in a React app. [CSS modules](https://github.com/css-modules/css-modules).
 ## Getting Started <a name = "gs"></a>
 > To get a local copy up and running follow these simple example steps.
->>>>>>> 8dd81afb5f1d03c7c5ae884a9ea2648858321d66
+
 
 <details>
   <summary>Get instructions</summary>
@@ -134,6 +137,20 @@ Make sure that the "Add item" and "Delete item" links are accessible only by use
 4. Refresh the page to see a different greeting message! 😸
 
 **Note:<br>_ These commands will not stop on their own. If you change something in your project files, it will recompile and reload the page in your browser. To exit, hit "ctrl + c"_**
+
+
+## Live Preview
+
+- [Rails](https://morning-chamber-68237.herokuapp.com/) API features.
+
+
+## :star: [Live Demo](https://morning-chamber-68237.herokuapp.com/) :star:
+
+## React Fronted App 
+[App](https://github.com/mrigorir/group-final-capstone-react)
+
+## API Documentation
+[API DOC LINK](https://capstoneapi.postman.co/workspace/3611123d-64d3-44a4-83f2-183e97770672)
 
 ## Linters
 To run the linters included in this repository, go to the root directory of your repository and copy/paste the following commands into your terminal:
@@ -160,8 +177,6 @@ Run `yarn start`  opens on `http://localhost:8080/` in your browser.
 * Open your terminal and locate the folder you want to clone the repository and follow the steps above to install
 
 </details>
-
-
 
 ## Project Structure
 
