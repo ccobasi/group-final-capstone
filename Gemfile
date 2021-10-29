@@ -11,17 +11,19 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'hirb', '~> 0.7.3'
+gem 'jbuilder', '~> 2.7'
+gem 'jwt', '~> 2.2'
 gem 'rswag'
 gem 'rswag-api'
 gem 'rswag-ui'
-gem 'jwt', '~> 2.2'
+
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.7'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

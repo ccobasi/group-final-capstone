@@ -15,7 +15,7 @@ RSpec.describe 'api/car_types', type: :request do
           created_at: { type: :string },
           updated_at: { type: :string }
         },
-        required: ['id', 'make', 'car_id', 'model']
+        required: %w[id make car_id model]
       }
 
       response '201', 'car created' do
@@ -46,7 +46,7 @@ RSpec.describe 'api/car_types', type: :request do
                  created_at: { type: :string },
                  updated_at: { type: :string }
                },
-               required: ['id', 'make', 'car_id', 'model']
+               required: %w[id make car_id model]
 
         let(:id) { Car_Type.create(id: '1', name: 'bar', image_data: 'wnjedjdj').id }
         run_test!
@@ -58,7 +58,7 @@ RSpec.describe 'api/car_types', type: :request do
       end
 
       response '406', 'unsupported accept header' do
-        let(:'Accept') { 'application/foo' }
+        let(:Accept) { 'application/foo' }
         run_test!
       end
     end
