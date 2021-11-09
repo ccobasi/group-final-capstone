@@ -215,11 +215,11 @@ Run `yarn start`  opens on `http://localhost:8080/` in your browser.
 - Twitter: [@Erreakay](https://github.com/errea)
 - Linkedin: [Eri Okereafor](https://www.linkedin.com/in/eri-ngozi-okereafor/)
 
-👤 **Abigeal**
+👤 **Abigeal Nyangasi**
 
-- Github: [@errea](https://github.com/errea)
-- Twitter: [@Erreakay](https://github.com/errea)
-- Linkedin: [Eri Okereafor](https://www.linkedin.com/in/eri-ngozi-okereafor/)
+- GitHub: [@IjayAbby](https://github.com/IjayAbby)
+- Twitter: [@Ijay_js](https://twitter.com/Ijay_js)
+- LinkedIn: [Abigael Nyangasi](https://www.linkedin.com/in/ijayabby4/)
   
 👤 **Chuwukma**
 
